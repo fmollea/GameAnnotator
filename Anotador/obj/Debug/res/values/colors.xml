@@ -1,0 +1,1 @@
+<resources><!--app's main color--><color name="colorPrimary">#F86D04</color><color name="colorPrimaryDark">#F86D04</color><color name="colorAccent">#F86D04</color><!--letter's main color --><color name="letterPrimary">#FFFFFF</color><!-- text color --><color name="textColor">#000000</color><!-- background color--><color name="background">#FFFFFF</color></resources>

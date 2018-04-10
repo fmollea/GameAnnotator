@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--App name -->
+  <string name="app_name">Anotador</string>
+  
+  <!-- Main Activity's strings -->
+  <string name="mainTitle">Anotador</string>
+  <string name="button_starting">Iniciar partida</string>
+  
+  <!-- ABM game activity's strings-->
+  <string name="ABMgame_Title">Preparar Partida</string>
+  <string name="textPlayersNum">Cantidad de Jugadores</string>
+  <string name="textHooksNum">Cantidad de Enganches</string>
+  <string name="Player1">Jugador 1</string>
+  <string name="Player2">Jugador 2</string>
+  <string name="Player3">Jugador 3</string>
+  <string name="Player4">Jugador 4</string>
+  <string name="Player5">Jugador 5</string>
+  <string name="Player6">Jugador 6</string>
+  <string name="PlayerEmpty">Debe ingresar un nombre.</string>
+
+  <!-- Scoring List activity's strings-->
+  <string name="scoringList_Title">Puntaje</string>
+
+  <!-- ABM Score activity's strings-->
+  <string name="Dlg_Add">Agregar puntaje</string>
+  <string name="Dlg_Edit">Editar puntaje</string>
+  <string name="Error_EmptyField">Debe ingresar un valor</string>
+  
+  <!-- Arrays strings -->
+  <string-array name="playersNum">
+    <item>2</item> 
+    <item>3</item>
+    <item>4</item>
+    <item>5</item>
+    <item>6</item>
+  </string-array>
+
+  <string-array name="hooksNum"> <!--hooksNum is "Números de enganches.-->
+    <item>0</item>
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    <item>Libres</item>
+  </string-array>
+</resources>

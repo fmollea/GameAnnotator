@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/layout_Registro.v">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+    <LinearLayout
+        android:id="@+id/layoutActivity"
+        android:layout_below="@id/toolbar"
+        style="@style/layout_Activity">
+        <TextView
+            style="@style/textInputSpinner"
+            android:text="@string/textPlayersNum" 
+            android:id="@+id/tPlayersNum"/>
+        <Spinner
+            android:id="@+id/sPlayersNum"
+            style="@style/spinner" />
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/txtPlayer1"
+            style="@style/textInputLayout"
+            android:hint="@string/Player1">
+            <EditText
+                android:id="@+id/ePlayer1"
+                style="@style/editText" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/txtPlayer2"
+            style="@style/textInputLayout"
+            android:hint="@string/Player2">
+            <EditText
+                android:id="@+id/ePlayer2"
+                style="@style/editText" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/txtPlayer3"
+            style="@style/textInputLayout"
+            android:hint="@string/Player3">
+            <EditText
+                android:id="@+id/ePlayer3"
+                style="@style/editText" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/txtPlayer4"
+            style="@style/textInputLayout"
+            android:hint="@string/Player4">
+            <EditText
+                android:id="@+id/ePlayer4"
+                style="@style/editText" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/txtPlayer5"
+            style="@style/textInputLayout"
+            android:hint="@string/Player5">
+            <EditText
+                android:id="@+id/ePlayer5"
+                style="@style/editText" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/txtPlayer6"
+            style="@style/textInputLayout"
+            android:hint="@string/Player6">
+            <EditText
+                android:id="@+id/ePlayer6"
+                style="@style/editText" />
+        </android.support.design.widget.TextInputLayout>
+        <TextView
+            style="@style/textInputSpinner"
+            android:text="@string/textHooksNum"
+            android:id="@+id/tHooksNum"/>
+        <Spinner
+            android:id="@+id/sHooksNum"
+            style="@style/spinner" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout_FAB"
+        style="@style/layout_FAB">
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabOk"
+            style="@style/fab"
+            android:src="@drawable/ic_ok" />
+    </LinearLayout>
+</RelativeLayout>

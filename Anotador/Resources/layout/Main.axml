@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+    <ImageView
+        android:layout_below="@id/toolbar"
+        android:src="@drawable/image_inicio"
+        style="@style/image"/>
+    <Button
+      style="@style/button"
+      android:layout_alignParentBottom="true"
+      android:id="@+id/bAceptar"
+      android:text="Aceptar" />
+    
+</RelativeLayout>
