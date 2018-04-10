@@ -29,6 +29,7 @@ namespace Anotador
                 
         protected int FCantPlayers;
         protected int FCantHooks;
+        protected int FPosScore = -1; 
 
         protected List<Scoring> listScoring;
 
@@ -81,6 +82,16 @@ namespace Anotador
             listNames = new List<string>();
         }
 
+
+        protected void Delegate()
+        {
+            fabAdd.Click += delegate { AddScore(); };
+            lvScoring.ItemClick += delegate (object sender, AdapterView.ItemClickEventArgs e)
+            {
+                FPosScore = e.Position;
+            };
+        }
+
         protected void ObtainData()
         {
             listNames.Add(Intent.GetStringExtra("PLAYER1"));
@@ -113,12 +124,7 @@ namespace Anotador
             else
                 pPlayer.Text = pName;
         }
-
-        protected void Delegate()
-        {
-            fabAdd.Click += delegate { AddScore(); };
-        }
-
+        
         protected void AddScore()
         {
             Dialog dlg = new Dialog(this);
