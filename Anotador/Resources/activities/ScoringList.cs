@@ -16,10 +16,11 @@ namespace Anotador
     [Activity(Label = "@string/scoringList_Title")]
     public class ScoringList : Activity
     {
-        protected IList<TextView> listPlayerNames;
-        protected IList<EditText> listFinalScores;
-        protected IList<string> listNames;
+        protected IList<TextView> listPlayerNamesTxt; // list of textview the players names
+        protected IList<EditText> listFinalScoresEdt; //List of editext of final score per player
+        protected IList<string> listNames; //List of all players
 
+        //FABs
         protected FloatingActionButton fabAdd;
         protected FloatingActionButton fabEdit;
         protected FloatingActionButton fabDelete;
@@ -27,20 +28,21 @@ namespace Anotador
         protected Android.Support.V7.Widget.Toolbar tToolbar;
         protected ListView lvScoring;
                 
-        protected int FCantPlayers;
-        protected int FCantHooks;
-        protected int FPosScore = -1; 
+        protected int FCantPlayers; //players count
+        protected int FCantHooks; // hooks count
+        protected int FPosItemSelect = -1; // position of item selected  in scoring list
 
-        protected List<Scoring> listScoring;
+        protected List<Scoring> listScoring; //scoring list 
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.ScoringList);
-            InitComponents();
-            ObtainData();
-            PutsPlayers();
+            InitComponents(); // binding and initialization of objects
+            ObtainData(); // obtainzation the Intent data
+            PutsPlayers();//This method puts the players names in your TextView and gone the fields where 
+                          //the name is empty or not exist.
             Delegate();
         }
 
@@ -50,25 +52,29 @@ namespace Anotador
             base.OnRestart();
             
         }
+
+        // binding and initialization of objects
         protected void InitComponents()
         {
-            listPlayerNames = new List<TextView>();
+            //binding the textview using list
+            listPlayerNamesTxt = new List<TextView>();
 
-            listPlayerNames.Add(FindViewById<TextView>(Resource.Id.tPlayer1));
-            listPlayerNames.Add(FindViewById<TextView>(Resource.Id.tPlayer2));
-            listPlayerNames.Add(FindViewById<TextView>(Resource.Id.tPlayer3));
-            listPlayerNames.Add(FindViewById<TextView>(Resource.Id.tPlayer4));
-            listPlayerNames.Add(FindViewById<TextView>(Resource.Id.tPlayer5));
-            listPlayerNames.Add(FindViewById<TextView>(Resource.Id.tPlayer6));
+            listPlayerNamesTxt.Add(FindViewById<TextView>(Resource.Id.tPlayer1));
+            listPlayerNamesTxt.Add(FindViewById<TextView>(Resource.Id.tPlayer2));
+            listPlayerNamesTxt.Add(FindViewById<TextView>(Resource.Id.tPlayer3));
+            listPlayerNamesTxt.Add(FindViewById<TextView>(Resource.Id.tPlayer4));
+            listPlayerNamesTxt.Add(FindViewById<TextView>(Resource.Id.tPlayer5));
+            listPlayerNamesTxt.Add(FindViewById<TextView>(Resource.Id.tPlayer6));
 
-            listFinalScores = new List<EditText>();
+            //binding the edittext using list
+            listFinalScoresEdt = new List<EditText>();
 
-            listFinalScores.Add(FindViewById<EditText>(Resource.Id.ePlayer1));
-            listFinalScores.Add(FindViewById<EditText>(Resource.Id.ePlayer2));
-            listFinalScores.Add(FindViewById<EditText>(Resource.Id.ePlayer3));
-            listFinalScores.Add(FindViewById<EditText>(Resource.Id.ePlayer4));
-            listFinalScores.Add(FindViewById<EditText>(Resource.Id.ePlayer5));
-            listFinalScores.Add(FindViewById<EditText>(Resource.Id.ePlayer6));
+            listFinalScoresEdt.Add(FindViewById<EditText>(Resource.Id.ePlayer1));
+            listFinalScoresEdt.Add(FindViewById<EditText>(Resource.Id.ePlayer2));
+            listFinalScoresEdt.Add(FindViewById<EditText>(Resource.Id.ePlayer3));
+            listFinalScoresEdt.Add(FindViewById<EditText>(Resource.Id.ePlayer4));
+            listFinalScoresEdt.Add(FindViewById<EditText>(Resource.Id.ePlayer5));
+            listFinalScoresEdt.Add(FindViewById<EditText>(Resource.Id.ePlayer6));
 
             fabAdd = FindViewById<FloatingActionButton>(Resource.Id.fabAdd);
             fabEdit = FindViewById<FloatingActionButton>(Resource.Id.fabEdit);
@@ -76,8 +82,11 @@ namespace Anotador
 
             tToolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             lvScoring = FindViewById<ListView>(Resource.Id.lvScoring);
-
+            
+            //Set a title in toolbar
             tToolbar.Title = GetString(Resource.String.scoringList_Title);
+            
+            //Initialize the objects
             listScoring = new List<Scoring>();
             listNames = new List<string>();
         }
@@ -88,10 +97,11 @@ namespace Anotador
             fabAdd.Click += delegate { AddScore(); };
             lvScoring.ItemClick += delegate (object sender, AdapterView.ItemClickEventArgs e)
             {
-                FPosScore = e.Position;
+                FPosItemSelect = e.Position;
             };
         }
 
+        // obtainzation the Intent data
         protected void ObtainData()
         {
             listNames.Add(Intent.GetStringExtra("PLAYER1"));
@@ -108,12 +118,14 @@ namespace Anotador
             }
         }
 
+        //This method puts the players names in your TextView and gone the fields where the name is empty or not exist.
         protected void PutsPlayers()
         {
             for(int i=0;i<6; i++)
-                CheckPlayers(listNames[i], listPlayerNames[i], listFinalScores[i]);
+                CheckPlayers(listNames[i], listPlayerNamesTxt[i], listFinalScoresEdt[i]);
         }
 
+        //This method check which fields should disappear. If not gone any field then puts the name in a textview
         protected void CheckPlayers(String pName, TextView pPlayer, EditText pScore)
         {
             if (pName == string.Empty)
@@ -232,7 +244,7 @@ namespace Anotador
                     if (src.GetScoring(i) != "#")
                         acumScore = acumScore + int.Parse(src.GetScoring(i));
                 }
-                listFinalScores[i].Text = acumScore.ToString();
+                listFinalScoresEdt[i].Text = acumScore.ToString();
                 acumScore = 0;
             }
         }

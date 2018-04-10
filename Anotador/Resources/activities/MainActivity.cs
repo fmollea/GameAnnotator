@@ -32,8 +32,7 @@ namespace Anotador
             tToolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
 
             //Set a title in toolbar
-            var res = Calcular();
-            tToolbar.Title = Calcular().ToString();
+            tToolbar.Title = GetString(Resource.String.mainTitle);
         }
 
         protected void Delegate()
@@ -43,16 +42,6 @@ namespace Anotador
                 //start ABM game
                 StartActivity(typeof(ABM_Partida));
             };
-        }
-
-        protected double Calcular()
-        {
-            double res = 0;
-            double aux1 = Math.Pow((-33.127677) - (-33.127873), 2);
-            double aux2 = Math.Pow((-64.364024) - (-64.362967), 2);
-            res = Math.Sqrt(aux1 + aux2);
-
-            return res;
         }
     }
 }
