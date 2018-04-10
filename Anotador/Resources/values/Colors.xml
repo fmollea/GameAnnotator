@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <resources>
   <!--app's main color-->
-  <color name="colorPrimary">#F86D04</color>
-  <color name="colorPrimaryDark">#F86D04</color>
-  <color name="colorAccent">#F86D04</color>
+  <color name="colorPrimary">#008141</color>
+  <color name="colorPrimaryDark">#008141</color>
+  <color name="colorAccent">#008141</color>
   
   <!--letter's main color -->
   <color name="letterPrimary">#FFFFFF</color>
