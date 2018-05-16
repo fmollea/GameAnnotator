@@ -7,11 +7,13 @@
     <ImageView
         android:layout_below="@id/toolbar"
         android:src="@drawable/image_inicio"
-        style="@style/image"/>
-    <Button
-      style="@style/button"
-      android:layout_alignParentBottom="true"
-      android:id="@+id/bAceptar"
-      android:text="Aceptar" />
-    
+        style="@style/image" />
+    <LinearLayout
+        android:id="@+id/layout_FAB"
+        style="@style/layout_FAB">
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabStart"
+            style="@style/fab"
+            android:src="@drawable/ic_ok" />
+    </LinearLayout>
 </RelativeLayout>

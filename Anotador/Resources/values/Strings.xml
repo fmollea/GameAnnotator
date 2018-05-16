@@ -2,6 +2,8 @@
 <resources>
   <!--App name -->
   <string name="app_name">Anotador</string>
+  <string name="titleError">Error</string>
+  <string name="msgError">Acaba de ocurrir el siguiente error: </string>
   
   <!-- Main Activity's strings -->
   <string name="mainTitle">Anotador</string>
@@ -21,6 +23,8 @@
 
   <!-- Scoring List activity's strings-->
   <string name="scoringList_Title">Puntaje</string>
+  <string name="scoringList_SelectItemEdit">Debe seleccionar un puntaje para Editar</string>
+  <string name="scoringList_SelectItemDelete">Debe seleccionar un puntaje para Eliminar</string>
 
   <!-- ABM Score activity's strings-->
   <string name="Dlg_Add">Agregar puntaje</string>

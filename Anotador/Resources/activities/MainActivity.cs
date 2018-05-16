@@ -11,7 +11,7 @@ namespace Anotador
     public class MainActivity : Activity 
     {
         //Declaration of the diferent components
-        protected Button bStart;
+        protected FloatingActionButton bStart;
         protected Android.Support.V7.Widget.Toolbar tToolbar;
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -28,7 +28,7 @@ namespace Anotador
         //Initialize the objects
         protected void InitComponents()
         {
-            bStart   = FindViewById<Button>(Resource.Id.bAceptar);
+            bStart   = FindViewById<FloatingActionButton>(Resource.Id.fabStart);
             tToolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
 
             //Set a title in toolbar

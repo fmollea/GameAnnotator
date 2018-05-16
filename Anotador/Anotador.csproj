@@ -107,6 +107,7 @@
     <Compile Include="Resources\activities\ABM_Partida.cs" />
     <Compile Include="Resources\activities\MainActivity.cs" />
     <Compile Include="Resources\class\Comunicador.cs" />
+    <Compile Include="Resources\class\Const.cs" />
     <Compile Include="Resources\class\ListAdapter.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

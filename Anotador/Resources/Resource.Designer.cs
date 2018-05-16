@@ -2433,9 +2433,6 @@ namespace Anotador
 			// aapt resource value: 0x7f07002f
 			public const int auto = 2131165231;
 			
-			// aapt resource value: 0x7f0700a3
-			public const int bAceptar = 2131165347;
-			
 			// aapt resource value: 0x7f070046
 			public const int basic = 2131165254;
 			
@@ -2570,6 +2567,9 @@ namespace Anotador
 			
 			// aapt resource value: 0x7f07008d
 			public const int fabOk = 2131165325;
+			
+			// aapt resource value: 0x7f0700a3
+			public const int fabStart = 2131165347;
 			
 			// aapt resource value: 0x7f07003b
 			public const int fill = 2131165243;
@@ -3225,38 +3225,38 @@ namespace Anotador
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f08002c
-			public const int ABMgame_Title = 2131230764;
+			// aapt resource value: 0x7f08002e
+			public const int ABMgame_Title = 2131230766;
 			
-			// aapt resource value: 0x7f080037
-			public const int Dlg_Add = 2131230775;
+			// aapt resource value: 0x7f08003b
+			public const int Dlg_Add = 2131230779;
 			
-			// aapt resource value: 0x7f080038
-			public const int Dlg_Edit = 2131230776;
+			// aapt resource value: 0x7f08003c
+			public const int Dlg_Edit = 2131230780;
 			
-			// aapt resource value: 0x7f080039
-			public const int Error_EmptyField = 2131230777;
-			
-			// aapt resource value: 0x7f08002f
-			public const int Player1 = 2131230767;
-			
-			// aapt resource value: 0x7f080030
-			public const int Player2 = 2131230768;
+			// aapt resource value: 0x7f08003d
+			public const int Error_EmptyField = 2131230781;
 			
 			// aapt resource value: 0x7f080031
-			public const int Player3 = 2131230769;
+			public const int Player1 = 2131230769;
 			
 			// aapt resource value: 0x7f080032
-			public const int Player4 = 2131230770;
+			public const int Player2 = 2131230770;
 			
 			// aapt resource value: 0x7f080033
-			public const int Player5 = 2131230771;
+			public const int Player3 = 2131230771;
 			
 			// aapt resource value: 0x7f080034
-			public const int Player6 = 2131230772;
+			public const int Player4 = 2131230772;
 			
 			// aapt resource value: 0x7f080035
-			public const int PlayerEmpty = 2131230773;
+			public const int Player5 = 2131230773;
+			
+			// aapt resource value: 0x7f080036
+			public const int Player6 = 2131230774;
+			
+			// aapt resource value: 0x7f080037
+			public const int PlayerEmpty = 2131230775;
 			
 			// aapt resource value: 0x7f080000
 			public const int abc_action_bar_home_description = 2131230720;
@@ -3360,14 +3360,17 @@ namespace Anotador
 			// aapt resource value: 0x7f080022
 			public const int bottom_sheet_behavior = 2131230754;
 			
-			// aapt resource value: 0x7f08002b
-			public const int button_starting = 2131230763;
+			// aapt resource value: 0x7f08002d
+			public const int button_starting = 2131230765;
 			
 			// aapt resource value: 0x7f080023
 			public const int character_counter_pattern = 2131230755;
 			
-			// aapt resource value: 0x7f08002a
-			public const int mainTitle = 2131230762;
+			// aapt resource value: 0x7f08002c
+			public const int mainTitle = 2131230764;
+			
+			// aapt resource value: 0x7f08002b
+			public const int msgError = 2131230763;
 			
 			// aapt resource value: 0x7f080024
 			public const int password_toggle_content_description = 2131230756;
@@ -3384,8 +3387,14 @@ namespace Anotador
 			// aapt resource value: 0x7f080028
 			public const int path_password_strike_through = 2131230760;
 			
-			// aapt resource value: 0x7f080036
-			public const int scoringList_Title = 2131230774;
+			// aapt resource value: 0x7f08003a
+			public const int scoringList_SelectItemDelete = 2131230778;
+			
+			// aapt resource value: 0x7f080039
+			public const int scoringList_SelectItemEdit = 2131230777;
+			
+			// aapt resource value: 0x7f080038
+			public const int scoringList_Title = 2131230776;
 			
 			// aapt resource value: 0x7f080013
 			public const int search_menu_title = 2131230739;
@@ -3393,11 +3402,14 @@ namespace Anotador
 			// aapt resource value: 0x7f080014
 			public const int status_bar_notification_info_overflow = 2131230740;
 			
-			// aapt resource value: 0x7f08002e
-			public const int textHooksNum = 2131230766;
+			// aapt resource value: 0x7f080030
+			public const int textHooksNum = 2131230768;
 			
-			// aapt resource value: 0x7f08002d
-			public const int textPlayersNum = 2131230765;
+			// aapt resource value: 0x7f08002f
+			public const int textPlayersNum = 2131230767;
+			
+			// aapt resource value: 0x7f08002a
+			public const int titleError = 2131230762;
 			
 			static String()
 			{

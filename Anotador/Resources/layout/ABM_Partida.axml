@@ -11,8 +11,8 @@
         style="@style/layout_Activity">
         <TextView
             style="@style/textInputSpinner"
-            android:text="@string/textPlayersNum" 
-            android:id="@+id/tPlayersNum"/>
+            android:text="@string/textPlayersNum"
+            android:id="@+id/tPlayersNum" />
         <Spinner
             android:id="@+id/sPlayersNum"
             style="@style/spinner" />
@@ -67,7 +67,7 @@
         <TextView
             style="@style/textInputSpinner"
             android:text="@string/textHooksNum"
-            android:id="@+id/tHooksNum"/>
+            android:id="@+id/tHooksNum" />
         <Spinner
             android:id="@+id/sHooksNum"
             style="@style/spinner" />
